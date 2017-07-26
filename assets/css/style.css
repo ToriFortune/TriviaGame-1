@@ -1,0 +1,17 @@
+.clearfix:after { 
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
+}
+body {
+    background-image: url("../images/background.jpg");
+}
+
+#main {
+    background-color: darkblue;
+    color: yellow;
+    text-align: center;
+    margin-top: 50px;
+}
