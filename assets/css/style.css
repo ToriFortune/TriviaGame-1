@@ -13,5 +13,6 @@ body {
     background-color: darkblue;
     color: yellow;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 125px;
+    float: left;
 }

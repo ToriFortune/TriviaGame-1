@@ -3,6 +3,8 @@ $(document).ready(function () {
     //global varabiles for keeping track of the score
     var correct = 0;
     var incorrect = 0;
+    var counter = 7;
+    var time = 20;
 
     // Creating variables
     var questions = [
@@ -28,7 +30,7 @@ $(document).ready(function () {
             a2: "Grow Basil",
             a3: "Think Deep Thoughts",
             a4: "Sing Songs"
-
+            //a1
         },
         {
             q: "What is the answer to life the universe and everything?",
@@ -36,6 +38,7 @@ $(document).ready(function () {
             a2: "To live a Good Life",
             a3: "42",
             a4: "Cloud Eggs"
+            //a3
         },
         {
             q: "What hippose are upset, their sweat turns: ",
@@ -43,6 +46,7 @@ $(document).ready(function () {
             a2: "Black",
             a3: "Green",
             a4: "Clear"
+            //a1
         },
         {
             q: "Banging your head against a wall burns how many calories an hour?",
@@ -50,6 +54,7 @@ $(document).ready(function () {
             a2: "150",
             a3: "25",
             a4: "300"
+            //a2
         },
         {
             q: "What is Lionel Richie's most greatest song?",
@@ -57,6 +62,7 @@ $(document).ready(function () {
             a2: "Deep Into the Night",
             a3: "Crrabba Fiesta Forever",
             a4: "Prince, formerly known as The Artist, formerly known as Prince.",
+            //a1
         }
     ];
     //examples of how to call questions & answers
@@ -79,10 +85,36 @@ $(document).ready(function () {
     //clear #main, display correct & incorrect
     // displays questions after clicking "begin"
     $("#begin").click(function () {
-        
-        // for loop that updates which question the user sees.
+
+
         $("#begin").html("");
-        
+
+        //setTimeout Function, for when time == 0
+        function timerExpired() {
+            questionCounter++;
+            newQuestion();
+            setTimeout(timerExpired, 1000 * 15);
+            incorrect ++;
+
+        }
+        //This one will make sure that every 15 seconds, your questions get "moved on" to the next question. You can do the same with an interval, like so:
+        setInterval(function () {
+            questionCounter++;
+            newQuestion();
+        }, 1000 * 15);
+        //if (time == 0){
+        incorrect++;
+        question--;
+        reset();
+        //}
+
+        //next question
+        // else if (counter == 0) {
+        //     $("#correct").html(correct);
+        //     $("#incorrect").html(incorrect);
+        // },
+
+        // for loop that updates which question the user sees.
         for (i = 0; i < 7; i++) {
             console.log(i);
             $("#question").html(questions[i].q);
@@ -97,16 +129,16 @@ $(document).ready(function () {
     }),
 
 
-    //  This code will run on doc ready
+        //  This code will run on doc ready
 
-    $(document).ready(function () {
-        //  Click events are done for us:
-        $("#lap").click(stopwatch.recordLap);
-        $("#stop").click(stopwatch.stop);
-        $("#reset").click(stopwatch.reset);
-        $("#start").click(stopwatch.start);
-        console.log("window function is working");
-    });
+        $(document).ready(function () {
+            //  Click events are done for us:
+            $("#lap").click(stopwatch.recordLap);
+            $("#stop").click(stopwatch.stop);
+            $("#reset").click(stopwatch.reset);
+            $("#start").click(stopwatch.start);
+            console.log("window function is working");
+        });
 
     //  Variable that will hold our setInterval that runs the stopwatch
     var intervalId;
@@ -162,12 +194,6 @@ $(document).ready(function () {
             if (seconds < 10) {
                 seconds = "0" + seconds;
             }
-            // if (minutes === 0) {
-            //     minutes = "00";
-            // }
-            // else if (minutes < 10) {
-            //     minutes = "0" + minutes;
-            // }
             return seconds;
         }
     };

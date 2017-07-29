@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../TriviaGame/assets/css/reset.css">
     <link rel="stylesheet" href="../TriviaGame/assets/css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    
 </head>
 
 <body>
@@ -25,10 +25,11 @@
     <div class="container">
         <div id="main" class="container">
             <h1 id="title" class="container">Bacon Pancakes Trivia!</h1>
-            <hp id="instructions">Select the best answer to the question. You have 20 Seconds to answer.</p>
+            <p id="instructions">Select the best answer to the question. You have 20 Seconds to answer.</p>
             <h2 id="begin">Click to Begin</h2>
+            <h2 id="correct"></h2>
+            <h2 id="incorrect"></h2>
             <h3 id="timeRemaining">Time Remaining: <span id="display"> 0 </span></h3>
-            <h3>lap count: <span id="laps"> 0 </span></h3>
             <h2 id="question" class="container">Will be asking you questions!</h2>
             <button id="start">Start</button>
             <div id="answers" class="container">
@@ -37,12 +38,18 @@
                 <p id="answer3">The Peanut Gallery</p>
                 <p id="answer4">Apple > Microsoft</p>
             </div>
+            <div id="triviaApi"></div>
+            <div id="api1"></div>
+            <div id="api2"></div>
+            <div id="api3"></div>
+            <div id="api4"></div>
 
         </div>
     </div>
 
-
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="../TriviaGame/Assets/javascript/app.js"></script>
+<script type="text/javascript" src="../TriviaGame/Assets/javascript/newAjax.js"></script>
 </body>
 
 </html>
