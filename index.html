@@ -1,55 +1,46 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
 <html>
-<!--<![endif]-->
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>TriviaGame</title>
-    <meta name="description" content="">
+    <meta name="example timer" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../TriviaGame/assets/css/reset.css">
-    <link rel="stylesheet" href="../TriviaGame/assets/css/style.css">
+    <!-- <link rel="stylesheet" href="../TriviaGame/assets/css/reset.css"> -->
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     
 </head>
 
 <body>
-    <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-    <div class="container">
-        <div id="main" class="container">
-            <h1 id="title" class="container">Bacon Pancakes Trivia!</h1>
-            <p id="instructions">Select the best answer to the question. You have 20 Seconds to answer.</p>
-            <h2 id="begin">Click to Begin</h2>
-            <h2 id="correct"></h2>
-            <h2 id="incorrect"></h2>
-            <h3 id="timeRemaining">Time Remaining: <span id="display"> 0 </span></h3>
-            <h2 id="question" class="container">Will be asking you questions!</h2>
-            <button id="start">Start</button>
-            <div id="answers" class="container">
-                <p id="answer1">Things and Stuff</p>
-                <p id="answer2">Bombs over Baghdad</p>
-                <p id="answer3">The Peanut Gallery</p>
-                <p id="answer4">Apple > Microsoft</p>
+  <div id="wrapper">
+    <div id="gradient">
+      <div class="container">
+        <section class="row">
+          <!-- is this row necessary since there is only one ??? -->
+          <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="jumbotron animated zoomIn">
+              <h1>Adventure Trivia!</h1>
+              <h5 class="timeRemaining"></h5>
+              <h3 class="question questionHeader"></h3>
+              <div class="answers"></div>
+              <p class="start-button text-center animated zoomInDown">
+                <a class="btn btn-primary btn-lg startButton animated pulse infinite" href="#" role="button">
+                  <span class="glyphicon glyphicon-off"></span>
+                </a>
+              </p>
             </div>
-            <div id="triviaApi"></div>
-            <div id="api1"></div>
-            <div id="api2"></div>
-            <div id="api3"></div>
-            <div id="api4"></div>
-
-        </div>
+          </div>
+          <!-- column -->
+        </section>
+        <!-- row -->
+      </div>
+      <!-- container -->
     </div>
-
-<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="../TriviaGame/Assets/javascript/app.js"></script>
-<script type="text/javascript" src="../TriviaGame/Assets/javascript/newAjax.js"></script>
+    <!-- gradient -->
+  </div>
+  <!-- wrapper -->
+  <!-- local JS file link -->
+ 
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="example.js"></script>
 </body>
-
-</html>
