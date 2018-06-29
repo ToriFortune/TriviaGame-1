@@ -2,7 +2,6 @@
   box-sizing: border-box;
 }
 
-
 /*--------------- Custom Font --------------*/
 
 @font-face {
@@ -21,7 +20,6 @@
   src: url('../fonts/Magnitude-Light.otf');
 }
 
-
 /* ----------------------- Background Gradient Pulse ------------- */
 
 #gradient {
@@ -30,7 +28,6 @@
   padding: 0px;
   margin: 0px;
 }
-
 
 /*----------------------------Welcome Page Only----------------------*/
 
@@ -54,7 +51,6 @@
   font-size: 30px;
   margin-top: 6px;
 }
-
 
 /*---------------------------Main Page----------------------------*/
 
@@ -92,9 +88,8 @@ p {
   text-align: center;
 }
 
-h3
 /*question*/
-
+h3
 {
   font-family: Abyssopelagic;
   letter-spacing: 3px;
@@ -108,9 +103,8 @@ h3
   line-height: 40px;
 }
 
-h4
 /*answers*/
-
+h4
 {
   color: #F8FFFA;
   font-size: 40px;
@@ -121,9 +115,8 @@ h4
   border-radius: 5px;
 }
 
-h5
 /*timer*/
-
+h5
 {
   color: #343F38;
   text-align: center;
@@ -186,7 +179,7 @@ h5
   }
   .answerImage {
     max-width: 400px;
-    max-height: 3000px/*center image and limit size*/
+    max-height: 3000px;/*center image and limit size*/
     margin: 0 auto;
   }
 }

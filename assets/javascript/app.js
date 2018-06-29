@@ -64,10 +64,6 @@ $(document).ready(function () {
     }
 
     function loadQandA() {
-        // console.log(correctAnswers);
-        // console.log(incorrectAnswers);
-        // console.log(unansweredQuestions);
-        // console.log(indexQandA);
         answered = false; // will allow timeRemaining to be pushed back to <h5> after round reset....else statement in function timer()
         timeRemaining = 16;
         intervalID = setInterval(timer, 1000);
@@ -84,15 +80,12 @@ $(document).ready(function () {
 
         $("h4").click(function () {
             var id = $(this).attr('id');
-            // alert(id);
             if (id === correct) {
                 answered = true; // stops the timer
-                // alert("correct answer");
                 $('.question').text("THE ANSWER IS: " + triviaGame[indexQandA].answer[correct]);
                 correctAnswer();
             } else {
                 answered = true; //stops the timer
-                // alert("incorrect answer");
                 $('.question').text("YOU CHOSE: " + triviaGame[indexQandA].answer[id] + ".....HOWEVER THE ANSWER IS: " + triviaGame[indexQandA].answer[correct]);
                 incorrectAnswer();
             }
